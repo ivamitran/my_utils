@@ -1,1 +1,1 @@
-# File for initializing directory as module
+# File for initializing directory as package
