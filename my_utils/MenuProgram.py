@@ -1,14 +1,17 @@
 class MenuProgram:
+    
+    exit_message = "Exiting program. Goodbye!"
+    
     def __init__(self):
         """
-        Menu Program Class for the Queries
+        menu program class for terminal menu user interface
         """
         self.menu_options = {}
         self.exit_option = "0"  # Default exit option key
 
     def add_option(self, description, target_function):
         """
-        Add a menu option for query target function
+        Add a menu option for a target function
         """
         option_number = str(len(self.menu_options) + 1)
         self.menu_options[option_number] = {"key": option_number, "description": description, "function": target_function}
@@ -27,7 +30,7 @@ class MenuProgram:
             choice = input("\nSelect an option: ").strip()
 
             if choice == self.exit_option:
-                print("Exiting program. Goodbye!")
+                print(MenuProgram.exit_message)
                 break
 
             # error handling for choosing an option
